@@ -1,0 +1,18 @@
+{
+  "name": "tetris",
+  "version": "1.0.0",
+  "description": "Total 304 lines",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "atsutopia <atsutopia@gmail.com> (https://github.com/atsutopia)",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "parcel-bundler": "^1.12.3"
+  },
+  "devDependencies": {}
+}
