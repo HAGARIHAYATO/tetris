@@ -9,10 +9,24 @@
   	<section class="score-container">
   		<h2>YOUR SCORE</h2>
   		<div class="score">
+        <p class="info"></p>
   			<p class="point"><span id="count">0</span>PT</p>
   		</div>
   	</section>
-    <canvas id="canvas"></canvas>
+    <div class="main-container">
+      <canvas id="canvas"></canvas>
+      <div class="rank">
+        <h4 class="title">RECORD</h4>
+        <div class="rank-container">
+          <div class="rank-wrapper">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="name-box">
+    <input type="text" id="text-input" placeholder="ニックネーム">
+    <div class="sBtn">START</div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.1/pixi.min.js"></script>
   <script src="assets/javascripts/app.js"></script>

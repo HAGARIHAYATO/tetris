@@ -5,7 +5,7 @@
 }
 
 #wrapper{
-  width: 288px;
+  width: 700px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -23,3 +23,97 @@ h2{
 	color: black;
     text-align: center;
 }
+
+.info{
+	font-size: 22px;
+	font-weight: bold;
+	text-align: center;
+	color: red;
+	text-shadow: 3px 3px 3px black;
+}
+
+.name-box{
+	width: 60%;
+	height: 60px;
+	margin: 20px auto 0 auto;
+	position: relative;
+	display: flex;
+}
+
+#text-input{
+	text-align: center;
+    font-size: 30px;
+    width: 60%;
+	height: 50px;
+	border: 2px solid black;
+	border-radius: 5px;
+	margin-left: 120px;
+}
+
+.sBtn{
+	height: 40px;
+	line-height: 40px;
+	width: 60px;
+	border-radius: 5px;
+	background-color: blue;
+	color: white;
+	font-weight: bold;
+	display: inline-block;
+	box-shadow: 0 5px blue;
+	border: 1px solid black;
+	position: absolute;
+	top: 5px;
+	right: 120px;
+	margin-left: 20px;
+}
+
+.sBtn:active{
+	top: 10px;
+	box-shadow: 0 0 blue;
+}
+
+.main-container{
+	margin-top: 30px;
+	height: 500px;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+
+.rank{
+	width: 300px;
+	min-height: 300px;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.title{
+	text-align: center;
+	font-size: 30px;
+	color: red;
+	margin: 10px 0;
+}
+
+.rank-container{
+	height: 300px;
+	width: 100%;
+	overflow: scroll;
+}
+
+.rank-wrapper{
+	width: 100%;
+	padding: 20px 0;
+}
+
+.rank-content{
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.score-point{
+	font-size: 24px;
+	color: red;
+}
+
+

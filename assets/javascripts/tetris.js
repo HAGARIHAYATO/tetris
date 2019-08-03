@@ -1,5 +1,11 @@
-
-import _ from "lodash"
+import axios from "axios";
+import _ from "lodash";
+const info = document.querySelector(".info");
+const count = document.querySelector("#count");
+const point = document.querySelector("#plus");
+const textInput = document.querySelector("#text-input");
+const ranking = document.querySelector(".rank-wrapper");
+console.log(textInput);
 
 const BLOCK_SIZE = 24
 const BLOCK_ROWS = 22
@@ -177,6 +183,17 @@ export default class Tetris {
     this.block = _.cloneDeep(BLOCKS[num])
     if (this.isHit()) {
     this.mode = GAMEOVER
+    info.textContent = "GAMEOVER";
+      console.log(allCount);
+      axios.post('https://script.google.com/macros/s/AKfycbxMD3fp3dI2t5zcISbMub_n6-85zctMAcQrelKeDJKy4YvpGNo/exec', {
+        name: textInput.value,
+        score: allCount
+        }, {
+          headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+        .then(response => {
+        }).catch(error => {
+        });
    }
   }
 
@@ -255,8 +272,6 @@ export default class Tetris {
   }
 
   deleteLine () {
-  const count = document.querySelector("#count");
-  const point = document.querySelector("#plus");
   	for (let row = BLOCK_ROWS -1; row > 0; row--){
  	const cells = _.filter(this.stage[row],(cell) => cell != NON_BLOCK && cell != WALL)
  	if (cells.length === BLOCK_COLS -2){
@@ -270,7 +285,7 @@ export default class Tetris {
     row++
     }
    }
-  count.innerHTML = allCount;
+  count.textContent = allCount;
     if(allCount>=150){
       count.style.color="gold";
     }else if(allCount>=100){
