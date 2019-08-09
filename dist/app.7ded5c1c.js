@@ -74,4 +74,4 @@ module.exports=require("./lib/axios");
 },{"axios":"O4Aa","lodash":"4HJa"}],"gVS8":[function(require,module,exports) {
 "use strict";var e=c(require("lodash")),t=c(require("axios")),n=c(require("./tetris"));function c(e){return e&&e.__esModule?e:{default:e}}var r=document.querySelector(".sBtn"),o=document.querySelector("#text-input"),a=document.querySelector(".rank-wrapper");r.addEventListener("click",function(){new n.default(document.querySelector("#canvas")),console.log(o.value)}),t.default.get("https://script.google.com/macros/s/AKfycbxMD3fp3dI2t5zcISbMub_n6-85zctMAcQrelKeDJKy4YvpGNo/exec").then(function(e){console.log(e.data);for(var t=0;t<=e.data.length;t++)a.innerHTML+='<div class="rank-content"><p>name:'+e.data[t].name+'</p><p>score:<span class="score-point">'+e.data[t].score+"</span></p></div>"}).catch(function(e){}).finally(function(){});
 },{"lodash":"4HJa","axios":"O4Aa","./tetris":"hleV"}]},{},["gVS8"], null)
-//# sourceMappingURL=/app.7ded5c1c.js.map
+//# sourceMappingURL=app.7ded5c1c.js.map
